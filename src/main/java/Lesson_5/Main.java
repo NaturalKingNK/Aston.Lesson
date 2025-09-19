@@ -1,7 +1,7 @@
 package Lesson_5;
 
-import com.aston.MyArrayDataException;
-import com.aston.MyArraySizeException;
+import Lesson_5.MyArrayDataException;
+import Lesson_5.MyArraySizeException;
 
 public class Main {
 
