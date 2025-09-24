@@ -1,4 +1,4 @@
-package Lesson_7;
+package Lesson_6.Lesson6_2;
 
 import java.util.*;
 
