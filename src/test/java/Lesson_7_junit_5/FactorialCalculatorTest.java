@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FactorialCalculatorTest {
 
-    // Для статического метода (Вариант 1)
     @Test
     void testCalculateFactorialStatic() {
         assertEquals(1, FactorialCalculator.calculateFactorial(0));
@@ -18,7 +17,6 @@ class FactorialCalculatorTest {
         assertEquals(120, FactorialCalculator.calculateFactorial(5));
     }
 
-    // Для нестатического метода (Вариант 2 и 3)
     @Test
     void testCalculateFactorialInstance() {
         FactorialCalculator calculator = new FactorialCalculator();

@@ -69,7 +69,7 @@ class NumberComparatorTest {
     @Test
     @DisplayName("Сравнение граничных значений")
     void testBoundaryValues() {
-        // Максимальные и минимальные значения int
+
         assertTrue(Integer.MAX_VALUE > Integer.MIN_VALUE);
         assertTrue(Integer.MIN_VALUE < Integer.MAX_VALUE);
         assertEquals(Integer.MAX_VALUE, Integer.MAX_VALUE);
@@ -93,12 +93,11 @@ class NumberComparatorTest {
             "1, 3, 5"
     })
     void testComparisonTransitivity(int a, int b, int c) {
-        // Если a < b и b < c, то a < c
+
         if (a < b && b < c) {
             assertTrue(a < c);
         }
 
-        // Если a > b и b > c, то a > c
         if (a > b && b > c) {
             assertTrue(a > c);
         }

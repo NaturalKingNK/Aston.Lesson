@@ -6,12 +6,10 @@ public class TriangleAreaCalculatorTest {
 
     private TriangleAreaCalculator calculator;
 
-    // Простой аналог @BeforeMethod
     public void setUp() {
         calculator = new TriangleAreaCalculator();
     }
 
-    // Простой аналог assertEquals с дельтой
     private void assertDoubleEquals(double actual, double expected, double delta, String message) {
         if (Math.abs(actual - expected) <= delta) {
             System.out.println("✓ " + message + " - PASSED (ожидалось: " + expected + ", получено: " + actual + ")");
@@ -86,12 +84,10 @@ public class TriangleAreaCalculatorTest {
         }
     }
 
-    // Простой аналог DataProvider
     public void testTriangleAreaParameterized() {
         setUp();
         System.out.println("=== Параметризованный тест ===");
 
-        // Массив тестовых данных: {основание, высота, ожидаемая_площадь}
         double[][] testData = {
                 {10.0, 5.0, 25.0},
                 {4.0, 3.0, 6.0},
@@ -140,7 +136,6 @@ public class TriangleAreaCalculatorTest {
         }
     }
 
-    // Метод для запуска всех тестов
     public void runAllTests() {
         System.out.println("=== ЗАПУСК ТЕСТОВ TriangleAreaCalculator ===\n");
 
@@ -163,7 +158,6 @@ public class TriangleAreaCalculatorTest {
         System.out.println("\n=== ТЕСТИРОВАНИЕ ЗАВЕРШЕНО ===");
     }
 
-    // Главный метод для запуска
     public static void main(String[] args) {
         TriangleAreaCalculatorTest test = new TriangleAreaCalculatorTest();
         test.runAllTests();

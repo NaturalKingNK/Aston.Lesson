@@ -14,7 +14,6 @@ public class NumberComparatorTest {
         setUp();
         System.out.println("=== ТЕСТ ВЫВОДА ===");
 
-        // Просто проверяем, что метод выполняется без ошибок
         try {
             comparator.compareNumbers(5, 5);
             comparator.compareNumbers(10, 5);
@@ -25,13 +24,11 @@ public class NumberComparatorTest {
         }
     }
 
-    // Метод для проверки логики сравнения (без вывода)
     public void testComparisonLogic() {
         System.out.println("=== ТЕСТ ЛОГИКИ СРАВНЕНИЯ ===");
 
         int a = 5, b = 3;
 
-        // Проверяем логику напрямую
         if (a > b && !(a < b) && a != b) {
             System.out.println("✓ Логика сравнения 5 и 3 корректна");
         } else {
