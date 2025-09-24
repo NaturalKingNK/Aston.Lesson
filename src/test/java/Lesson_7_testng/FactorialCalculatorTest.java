@@ -34,7 +34,6 @@ public class FactorialCalculatorTest {
         setUp();
         boolean allPassed = true;
 
-        // Тестируем несколько значений
         long[][] testCases = {
                 {2, 2},    // 2! = 2
                 {3, 6},     // 3! = 6
@@ -89,7 +88,6 @@ public class FactorialCalculatorTest {
         }
     }
 
-    // Метод для запуска всех тестов
     public void runAllTests() {
         System.out.println("=== ЗАПУСК ТЕСТОВ FactorialCalculator ===");
 
@@ -102,12 +100,10 @@ public class FactorialCalculatorTest {
         System.out.println("=== ТЕСТИРОВАНИЕ ЗАВЕРШЕНО ===");
     }
 
-    // Главный метод для запуска
     public static void main(String[] args) {
         FactorialCalculatorTest test = new FactorialCalculatorTest();
         test.runAllTests();
 
-        // Демонстрация работы
         System.out.println("\n=== ДЕМОНСТРАЦИЯ ===");
         FactorialCalculator demo = new FactorialCalculator();
         for (int i = 0; i <= 6; i++) {

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class FactorialCalculator {
 
-    // Статический метод
     public static long calculateFactorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Факториал отрицательного числа не определен.");
@@ -28,7 +27,7 @@ public class FactorialCalculator {
         if (number < 0) {
             System.out.println("Факториал отрицательного числа не определен.");
         } else {
-            // Теперь можно вызывать статический метод
+
             long factorial = calculateFactorial(number);
             System.out.println("Факториал числа " + number + " = " + factorial);
         }

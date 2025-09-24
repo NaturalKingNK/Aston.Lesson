@@ -6,12 +6,11 @@ public class ArithmeticOperationsTest {
 
     private ArithmeticOperations operations;
 
-    // Аналог @BeforeMethod
+
     public void setUp() {
         operations = new ArithmeticOperations();
     }
 
-    // Простые методы проверки
     private void assertIntEquals(int actual, int expected, String message) {
         if (actual == expected) {
             System.out.println("✓ " + message + " - PASSED (" + actual + ")");
@@ -99,7 +98,6 @@ public class ArithmeticOperationsTest {
         setUp();
         System.out.println("=== Проверка коммутативности ===");
 
-        // Коммутативность сложения: a + b = b + a
         int a = 7, b = 3;
         int result1 = operations.add(a, b);
         int result2 = operations.add(b, a);
@@ -110,7 +108,6 @@ public class ArithmeticOperationsTest {
             System.out.println("✗ Ошибка коммутативности сложения");
         }
 
-        // Коммутативность умножения: a * b = b * a
         result1 = operations.multiply(a, b);
         result2 = operations.multiply(b, a);
 
@@ -128,7 +125,6 @@ public class ArithmeticOperationsTest {
         int a = 8, b = 4;
         boolean allPassed = true;
 
-        // Сложение
         if (operations.add(a, b) == 12) {
             System.out.println("  ✓ " + a + " + " + b + " = 12");
         } else {
@@ -136,7 +132,6 @@ public class ArithmeticOperationsTest {
             allPassed = false;
         }
 
-        // Вычитание
         if (operations.subtract(a, b) == 4) {
             System.out.println("  ✓ " + a + " - " + b + " = 4");
         } else {
@@ -144,7 +139,6 @@ public class ArithmeticOperationsTest {
             allPassed = false;
         }
 
-        // Умножение
         if (operations.multiply(a, b) == 32) {
             System.out.println("  ✓ " + a + " * " + b + " = 32");
         } else {
@@ -152,7 +146,6 @@ public class ArithmeticOperationsTest {
             allPassed = false;
         }
 
-        // Деление
         if (Math.abs(operations.divide(a, b) - 2.0) < 0.001) {
             System.out.println("  ✓ " + a + " / " + b + " = 2.0");
         } else {
@@ -191,7 +184,6 @@ public class ArithmeticOperationsTest {
         }
     }
 
-    // Метод для запуска всех тестов
     public void runAllTests() {
         System.out.println("=== ЗАПУСК ТЕСТОВ ARITHMETIC OPERATIONS ===\n");
 
@@ -221,12 +213,10 @@ public class ArithmeticOperationsTest {
         System.out.println("\n=== ТЕСТИРОВАНИЕ ЗАВЕРШЕНО ===");
     }
 
-    // Главный метод для запуска
     public static void main(String[] args) {
         ArithmeticOperationsTest test = new ArithmeticOperationsTest();
         test.runAllTests();
 
-        // Демонстрация работы
         System.out.println("\n=== ДЕМОНСТРАЦИЯ РАБОТЫ ===");
         ArithmeticOperations demo = new ArithmeticOperations();
 
